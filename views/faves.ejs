@@ -1,0 +1,14 @@
+<% if (cities.length > 0) { %>
+    <h1>Favorite cities:</h1>
+    <% cities.forEach(city => { %>
+        <div>
+            <h5><%= city.name %>, <%= city.state %></h5>
+            <p style="font-style: italic;">
+                Latitude: <%= city.lat %>, Longitude: <%= city.long %>
+            </p>
+        </div>
+    <% }) %>
+<% } else { %>
+    <h1>Nothing found</h1>
+    <p>Add some favorite cities by searching <a href="/">here</a></p>
+<% } %>
